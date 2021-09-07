@@ -6,10 +6,10 @@ function get_db_config()
         $url = parse_url(getenv("DATABASE_URL"));
         return $db_config = [
             'connection' => 'pgsql',
-            'host' => $url['host'],
-            'database'  => substr($url['path'],1),
-            'username'  => $url['user'],
-            'password'  => $url['pass']
+            'host' => 'ec2-18-215-44-132.compute-1.amazonaws.com',
+            'database'  => 'dbhjv1jnnfgvk0',
+            'username'  => 'qdmcawllqdwmax',
+            'password'  => 'e84e7c10c6316fc6f0a62aba1012041e7cae75c24cf00721dead0f964cff00e9',
         ];
     }else{
         return $db_config = [
